@@ -2,14 +2,17 @@ import React, {Component, useState} from "react";
 import "./../styles/App.css";
 
 function App() {
-  const [state, setstate] = useState("")  
+  let [msg, setmsg] = useState("")  
   function myFunc(){
-    setstate("Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy")
-  }
+    if (msg===""){
+    setmsg(msg=<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>)
+    }
+  };
   return (
     <div id="main">
-      <p id="para">{state}</p>
+     
       <button id="click" onClick={myFunc}>Click me</button>
+      {msg}
     </div>
   );
 }
